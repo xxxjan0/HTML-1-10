@@ -226,9 +226,291 @@
                 <area shape="rect" coords="32,22,190,140" href="ssilki/karta3.html" alt="">
             </map>
         </div>
-        <div class="eight" id="eight"></div>
-        <div class="nine" id="nine"></div>
-        <div class="ten" id="ten"></div>
+        <style>
+            th {
+                background-color: yellow;
+            }
+            .footerAllCells {
+                background-color: aquamarine;
+            }
+            .allCells {
+                background-color: greenyellow;
+            }
+            .secondInFirstTable {
+                background-color: red;
+            }
+        </style>
+        <div class="eight" id="eight">
+            <h1 align="center">Таблицы</h1>
+            <h2>1. Простая таблица 2×3</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                </tr>
+                <tr>
+                    <td>ячейка 1</td>
+                    <td>ячейка 2</td>
+                </tr>
+                <tr>
+                    <td>ячейка 3</td>
+                    <td>ячейка 4</td>
+                </tr>
+            </table>
+
+
+            <h2>2. В таблице много заголовков</h2>
+            <table border="1">
+                <tr>
+                    <td></td>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                </tr>
+                <tr>
+                    <th>заголовок 3</th>
+                    <td>ячейка 1</td>
+                    <td>ячейка 2</td>
+                </tr>
+                <tr>
+                    <th>заголовок 4</th>
+                    <td>ячейка 3</td>
+                    <td>ячейка 4</td>
+                </tr>
+            </table>
+
+            <h2>3. Форматирование ячеек-заголовков</h2>
+            <table border="1">
+                <tr>
+                    <th width="200">Заголовок А</th>
+                    <th width="500">Заголовок Б (шире А)</th>
+                </tr>
+                <tr>
+                    <td>ячейка 1</td>
+                    <td>ячейка 2</td>
+                </tr>
+                <tr>
+                    <td>ячейка 3</td>
+                    <td>ячейка 4</td>
+                </tr>
+            </table>
+
+            <h2>4. Объединение ячеек</h2>
+            <table border="1">
+                <tr>
+                    <th width="200">Заголовок 1</th>
+                    <th width="200">Заголовок 2</th>
+                </tr>
+                <tr>
+                    <td rowspan="3" class="allCells">Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 3</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 4</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="footerAllCells">Ячейка 5</td>
+                </tr>
+            </table>
+
+            <h2>5. Объединение ячеек жесткое</h2>
+            <table border="1">
+                <tr>
+                    <th width="200">Заголовок 1</th>
+                    <th width="200">Заголовок 2</th>
+                    <th width="200">Заголовок 3</th>
+                </tr>
+                <tr>
+                    <td rowspan="4" colspan="2" class="allCells">Ячейка 1</td>
+                    <td style="padding: 10px;"></td>
+                </tr>
+                <tr>
+                    <td>Ячейка 2</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 3</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 4</td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center" class="footerAllCells">Ячейка 5</td>
+                </tr>
+            </table>
+
+            <h2>6. Вложенная таблица</h2>
+            <table border="1" cellpadding="8px" style="background-color: yellow;">
+                <tr>
+                    <td>Таблица 1</td>
+                    <td width="300">
+                        <table border="1" cellpadding="8px" >
+                            <tr class="secondInFirstTable">
+                                <td>Таблица2</td>
+                                <td>Ячейка 2-2</td>
+                            </tr>
+                            <tr class="secondInFirstTable">
+                                <td>Ячейка 3-2</td>
+                                <td>Ячейка 4-2</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ячейка 3-1</td>
+                    <td>Ячейка 4-1</td>
+                </tr>
+            </table>
+        </div>
+        <div class="nine" id="nine" style="background-color: burlywood;">
+            <br>
+            <h2 align="center">Калькулятор</h2>
+            <table border="1" cellpadding="6" cellspacing="0" align="center" style="background-color: white;">
+                <tr>
+                    <th width="250">Вид</th>
+                    <th width="400">Кнопки</th>
+                </tr>
+
+                <tr>
+                    <td valign="top" align="center">
+                        <table border="1">
+                            <tr align="center">
+                                        <td width="20%"></td>
+                                        <td colspan=3 width="42%"><b>Backspace</b></td>
+                                        <td width="20%"><b>CE</b></td>
+                                        <td width="20%"><b>C</b></td>
+                                    </tr>
+                            <tr align="center">
+                                        <td width="14%"><b>MC</b></td>
+                                        <td width="14%"><b>7</b></td>
+                                        <td width="14%"><b>8</b></td>
+                                        <td width="14%"><b>9</b></td>
+                                        <td width="14%"><b>/</b></td>
+                                        <td width="14%"><b>sqrt</b></td>
+                                    </tr>
+                            <tr align="center">
+                                        <td width="14%"><b>MR</b></td>
+                                        <td width="14%"><b>4</b></td>
+                                        <td width="14%"><b>5</b></td>
+                                        <td width="14%"><b>6</b></td>
+                                        <td width="14%"><b>*</b></td>
+                                        <td width="14%"><b>%</b></td>
+                                    </tr>
+                            <tr align="center">
+                                        <td width="14%"><b>MS</b></td>
+                                        <td width="14%"><b>1</b></td>
+                                        <td width="14%"><b>2</b></td>
+                                        <td width="14%"><b>3</b></td>
+                                        <td width="14%"><b>-</b></td>
+                                        <td width="14%"><b>1/x</b></td>
+                                    </tr>
+                            <tr align="center">
+                                        <td width="14%"><b>M+</b></td>
+                                        <td width="14%"><b>0</b></td>
+                                        <td width="14%"><b>+/-</b></td>
+                                        <td width="14%"><b>,</b></td>
+                                        <td width="14%"><b>+</b></td>
+                                        <td width="14%"><b>=</b></td>
+                                    </tr>
+                        </table>
+                    </td>
+
+                    <td valign="top">
+                        <table border="1" cellpadding="4" cellspacing="0" width="100%">
+                            <tr>
+                                <th width="40%">Назначение</th>
+                                <th width="60%">Название</th>
+                            </tr>
+                            <tr>
+                                <td>Ввод чисел</td>
+                                <td>0 1 2 3 4 5 6 7 8 9 . +/-</td>
+                            </tr>
+                            <tr>
+                                <td>Основные операции</td>
+                                <td>+  -  *  /  =</td>
+                            </tr>
+                            <tr>
+                                <td>Специальные операции</td>
+                                <td>sqrt   %   1/x</td>
+                            </tr>
+                            <tr>
+                                <td>Редактирование введённого числа</td>
+                                <td>Backspace   CE   C</td>
+                            </tr>
+                            <tr>
+                                <td>Работа с памятью</td>
+                                <td>MC   MR   MS   M+</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+            </table>
+            <br><br><br>
+        </div>
+        <div class="ten" id="ten">
+            <h1>Формы</h1>
+            <h2>Элементы диалога</h2>
+            <form action="#">
+                <details open>
+                    <summary>
+                            Элементы INPUT
+                    </summary>
+                    <br>
+                    <label>Текстовое поле</label>
+                    <input id="textField" type="text" name="text"><br><br>
+
+                    <label>Поле для ввода пароля</label>
+                    <input id="passField" type="password" name="password"><br><br>
+
+                    <label>Флажки</label><br>
+                    <label><input type="checkbox"> </label>
+                    <label><input type="checkbox"> </label>
+                    <label><input type="checkbox"> </label><br><br>
+
+                    <label>Переключатели</label><br>
+                    <label><input type="radio"> </label>
+                    <label><input type="radio"> </label>
+                    <label><input type="radio"> </label><br><br>
+
+                    <label>Поле для файлов</label><br>
+                    <input type="file" name="fileupload"><br><br>
+
+                    <label>Кнопка подтверждения</label><br>
+                    <input type="submit" value="Отправить форму"><br><br>
+
+                    <label>Кнопка с изображением</label>
+                    <input type="image" src="knopka.gif" alt="Кнопка с изображением"><br><br>
+
+                    <label>Кнопка очистки формы</label>
+                    <input type="reset" value="Очистить всё">
+                </details>
+                <details>
+                    <summary>Элемент SELECT</summary><br>
+                    <select name="select1">
+                        <option value="1">Первый</option>
+                        <option value="2">второй</option>
+                        <option value="3">третий</option>
+                        <option value="4">четвертый</option>
+                        <option value="5">пятый</option>
+                    </select>
+                    <label>Множественный выбор (CTRL)</label>
+                    <select name="select2" multiple size="3">
+                        <option value="1">Первый</option>
+                        <option value="2">второй</option>
+                        <option value="3">третий</option>
+                        <option value="4">четвертый</option>
+                        <option value="5">пятый</option>
+                    </select>   
+                </details>
+                <details>
+                    <summary>Элемент TEXTAREA</summary>
+                    <textarea name="comment" style="width: 400px; height: 100px; resize: none; overflow: auto;" 
+                    placeholder="Введите текст здесь..."></textarea>
+                </details>
+            </form>
+        </div>
     </div>
     
 </body>
